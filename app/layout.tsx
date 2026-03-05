@@ -13,7 +13,7 @@ const italiana = Italiana({
 
 const syne = Syne({
   subsets: ['latin'],
-  weights: [400, 500, 600, 700, 800],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-syne',
 })
 
@@ -25,7 +25,7 @@ const syneMono = Syne_Mono({
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
-  weights: [400, 500, 600, 700],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-dm-sans',
 })
 

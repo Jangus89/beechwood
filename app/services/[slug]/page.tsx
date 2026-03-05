@@ -3,15 +3,17 @@
 import Link from 'next/link'
 import Button from '@/components/Button'
 import { SERVICES, COMPANY_INFO } from '@/lib/services'
+import { use } from 'react'
 
 interface ServicePageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export default function ServiceDetailPage({ params }: ServicePageProps) {
-  const service = SERVICES.find((s) => s.slug === params.slug)
+  const { slug } = use(params)
+  const service = SERVICES.find((s) => s.slug === slug)
 
   if (!service) {
     return (
